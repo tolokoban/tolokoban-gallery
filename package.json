@@ -22,7 +22,7 @@
   },
   "scripts": {
     "start": "react-app-rewired start",
-    "build": "react-app-rewired build && node tools/zip-build.js",
+    "build": "react-app-rewired build",
     "export": "cp -rvfu src/tp src/tfw ../_common_",
     "import": "cp -rvfu ../_common_/* src",
     "predeploy": "npm run build",

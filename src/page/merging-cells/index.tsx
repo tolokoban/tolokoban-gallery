@@ -1,5 +1,6 @@
 import React from "react"
 import Painter from "./painter"
+import Debouncer from "../../tfw/debouncer"
 
 import "./merging-cells.css"
 
@@ -33,7 +34,7 @@ export default class MargingCells extends React.Component<IMargingCellsProps, {}
 
     componentDidMount() {
         this.paint();
-        window.addEventListener("resize", () => this.paint());
+        window.addEventListener("resize", Debouncer(() => this.paint(), 300));
     }
 
     render() {
