@@ -1,9 +1,9 @@
 {
-  "name": "trail-passion-guide",
+  "name": "tolokoban-gallery",
   "version": "0.1.0",
   "private": true,
   "proxy": "http://localhost/TP",
-  "homepage": "./",
+  "homepage": "https://tolokoban.github.io/tolokoban-gallery",
   "dependencies": {
     "@types/jest": "^24.0.13",
     "@types/node": "^11.13.14",
@@ -23,8 +23,6 @@
   "scripts": {
     "start": "react-app-rewired start",
     "build": "react-app-rewired build",
-    "export": "cp -rvfu src/tp src/tfw ../_common_",
-    "import": "cp -rvfu ../_common_/* src",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "test": "react-app-rewired test",
