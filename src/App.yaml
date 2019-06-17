@@ -1,0 +1,77 @@
+en:
+    back: Go back to the trace view
+    color: Stroke color
+    color_A: Default gradient
+    color_B: Yellow
+    color_C: Blue
+    color_D: Blue to White
+    distance: Show distances
+    fontsize: Font size
+    fontsize_H: Huge
+    fontsize_M: Medium
+    fontsize_L: Small
+    format: Page Format
+    ign: <html>Les conditions générales d'utilisation des licences géoservices IGN limitent l’impression au format A4 en 150 dpi.<br/>Veuillez choisir un autre fond de carte ou une taille de page inférieure.
+    map-base: Map layer
+    opacity: Opac line
+    orientation: Orientation
+    orientation_L: Landscape
+    orientation_P: Portrait
+    paint: Paint
+    profil: Display the profile
+    qrcode: QR Code for ...
+    qrcode-trace: Trace's view
+    qrcode-follow: GPS follow
+    qrcode-flash-follow: Be followed
+    qrcode-navigation: Navigation
+    qrcode-live: Timing
+    quality: Painting quality
+    quality_H: High Quality
+    quality_M: Medium Quality
+    quality_L: Low Quality
+    save: Save as PDF
+    stop: Show stops
+    thickness: Stroke thickness
+    thickness_H: Thick
+    thickness_M: Medium
+    thickness_L: Thin
+    title: Title
+
+fr:
+    back: Retourner à la vue de la trace
+    color: Couleur du tracé
+    color_A: Dégradé classique
+    color_B: Jaune
+    color_C: Bleu
+    color_D: Dégradé du bleu vers le blanc
+    distance: Afficher les distances
+    fontsize: Taille des textes
+    fontsize_H: Enorme
+    fontsize_M: Moyenne
+    fontsize_L: Petit
+    format: Format de page
+    ign: <html>Les conditions générales d'utilisation des licences géoservices IGN limitent l’impression au format A4 en 150 dpi.<br/>Veuillez choisir un autre fond de carte ou une taille de page inférieure.
+    map-base: Fond de carte
+    opacity: Trait opaque
+    orientation: Orientation
+    orientation_L: Paysage
+    orientation_P: Portrait
+    paint: Dessiner
+    profil: Afficher le profil
+    qrcode: QR Code pour ...
+    qrcode-trace: Vue de la trace
+    qrcode-follow: Suivre autrui par GPS
+    qrcode-flash-follow: Être suivi par GPS
+    qrcode-navigation: Navigation
+    qrcode-live: Chronométrage
+    quality: Finesse de l'affichage
+    quality_H: Haute qualité
+    quality_M: Moyenne qualité
+    quality_L: Basse qualité
+    save: Sauvegarder en PDF
+    stop: Barrières horaires
+    thickness: Epaisseur du tracé
+    thickness_H: Trait épais
+    thickness_M: Epaisseur moyenne
+    thickness_L: Trait fin
+    title: Titre
