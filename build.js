@@ -13,6 +13,13 @@ const images = output.split('\n')
             path: Path.resolve(line)
         }
     })
+    .sort((a, b) => {
+        const A = `${a.year}-${pad(a.month)}-${pad(a.day)}`
+        const B = `${b.year}-${pad(b.month)}-${pad(b.day)}`
+        if (A < B) return +1
+        if (A > B) return -1
+        return 0
+    })
 createFolder('build')
 createFolder('build/img')
 let progress = 0
@@ -30,7 +37,7 @@ for(const {year, month, day, path: srcPath} of images) {
     console.log(`${progress} / ${images.length}`,':  ', srcPath, " > ", name, " > ", `${width}x${height}`, `  (${thumbnailW}x${thumbnailH})`)
     ChildProcess.execSync(`cwebp -quiet -q 85 "${srcPath}" -o "${dstPath}.thumbnail.webp"`)
     ChildProcess.execSync(`cwebp -quiet -q 70 "${srcPath}" -resize ${thumbnailH} ${thumbnailH} -o "${dstPath}.webp"`)
-    links.push(`<a href="img/${name}.thumbnail.webp" target="zoom"><img width="${thumbnailW}" height="${thumbnailH}" src="img/${name}.webp"/><div>${name}</div></a>`)
+    links.push(`<a href="img/${name}.thumbnail.webp"><img width="${thumbnailW}" height="${thumbnailH}" src="img/${name}.webp"/><div>${name}</div></a>`)
 }
 const indexContent = ChildProcess.execSync('cat ./public/index.html').toString()
 const finalPage = indexContent.replace('{{BODY}}', links.join('\n'))
