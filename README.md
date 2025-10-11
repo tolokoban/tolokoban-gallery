@@ -1,2 +1,3 @@
 # tolokoban-gallery
-Examples of [generative art](https://tolokoban.github.io/tolokoban-gallery).
+
+Here is a [gallery](https://tolokoban.github.io/tolokoban-gallery) with some of my drawings.
