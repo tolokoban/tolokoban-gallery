@@ -1,62 +1,144 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="utf-8" />
     <link rel="shortcut icon" href="favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link media="all" rel="stylesheet" href="style.css" />
+    <script src="list.js" type="text/javascript"></script>
+    <script async defer src="script.js" type="text/javascript"></script>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
     <meta name="theme-color" content="#995511" />
     <title>Tolokoban Gallery</title>
     <style>
-        html { background-color: dimgray; }
-        a {
-            display: inline-flex;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-            margin: 1rem;
-            width: calc(300px + 2rem);
-            height: calc(300px + 2rem);
-            background-color: antiquewhite;
-            box-shadow: 0 .25rem .5rem #0007;
-            vertical-align: bottom;
-        }
+      #tgd-logo-powered {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        font-size: 3vmin;
+        font-family: sans-serif;
+        padding: 8px;
+        text-align: right;
+        opacity: 0.8;
+      }
 
-        a > div {
-            position: absolute;
-            display: flex;
-            justify-content: flex-end;
-            align-items: center;
-            font-family: monospace;
-            font-size: .8rem;
-            color: #0007;
-            right: 0.125rem;
-            bottom: 0;
-            height: 1rem;
+      #tgd-logo {
+        background: #002e3d;
+        color: #fff;
+        z-index: 9999;
+        transition: all 1s;
+      }
+
+      #tgd-logo,
+      #tgd-logo svg {
+        position: fixed;
+        margin: 0;
+        left: 0;
+        right: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        bottom: 0;
+        opacity: 1;
+      }
+      #tgd-logo svg {
+        animation: tgd-logo-anim 9s linear infinite;
+      }
+      #tgd-logo svg path.c1 {
+        animation: tgd-logo-anim-c1 9s linear infinite;
+      }
+      #tgd-logo svg path.c2 {
+        animation: tgd-logo-anim-c2 9s linear infinite;
+      }
+      #tgd-logo svg path.c3 {
+        animation: tgd-logo-anim-c3 9s linear infinite;
+      }
+      @keyframes tgd-logo-anim {
+        from {
+          transform: rotate(0);
         }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+      @keyframes tgd-logo-anim-c1 {
+        0% {
+          fill: #d70;
+        }
+        33% {
+          fill: #6d2e01;
+        }
+        67% {
+          fill: #b60;
+        }
+        100% {
+          fill: #d70;
+        }
+      }
+      @keyframes tgd-logo-anim-c3 {
+        0% {
+          fill: #b60;
+        }
+        33% {
+          fill: #d70;
+        }
+        67% {
+          fill: #6d2e01;
+        }
+        100% {
+          fill: #b60;
+        }
+      }
+      @keyframes tgd-logo-anim-c2 {
+        0% {
+          fill: #6d2e01;
+        }
+        33% {
+          fill: #b60;
+        }
+        67% {
+          fill: #d70;
+        }
+        100% {
+          fill: #6d2e01;
+        }
+      }
     </style>
-</head>
+  </head>
 
-<body>
-<a href="img/2021-03-27.thumbnail.webp"><img width="300" height="300" src="img/2021-03-27.webp"/><div>2021-03-27</div></a>
-<a href="img/2021-03-26.thumbnail.webp"><img width="300" height="168" src="img/2021-03-26.webp"/><div>2021-03-26</div></a>
-<a href="img/2021-03-20.thumbnail.webp"><img width="300" height="300" src="img/2021-03-20.webp"/><div>2021-03-20</div></a>
-<a href="img/2021-03-09.thumbnail.webp"><img width="300" height="212" src="img/2021-03-09.webp"/><div>2021-03-09</div></a>
-<a href="img/2021-03-08.thumbnail.webp"><img width="300" height="212" src="img/2021-03-08.webp"/><div>2021-03-08</div></a>
-<a href="img/2021-03-04.thumbnail.webp"><img width="300" height="225" src="img/2021-03-04.webp"/><div>2021-03-04</div></a>
-<a href="img/2021-03-03.thumbnail.webp"><img width="300" height="236" src="img/2021-03-03.webp"/><div>2021-03-03</div></a>
-<a href="img/2021-03-02.thumbnail.webp"><img width="300" height="300" src="img/2021-03-02.webp"/><div>2021-03-02</div></a>
-<a href="img/2021-03-01.thumbnail.webp"><img width="212" height="300" src="img/2021-03-01.webp"/><div>2021-03-01</div></a>
-<a href="img/2021-02-14.thumbnail.webp"><img width="240" height="300" src="img/2021-02-14.webp"/><div>2021-02-14</div></a>
-<a href="img/2021-02-12.thumbnail.webp"><img width="300" height="168" src="img/2021-02-12.webp"/><div>2021-02-12</div></a>
-<a href="img/2021-02-11.thumbnail.webp"><img width="212" height="300" src="img/2021-02-11.webp"/><div>2021-02-11</div></a>
-<a href="img/2021-02-10.thumbnail.webp"><img width="300" height="300" src="img/2021-02-10.webp"/><div>2021-02-10</div></a>
-<a href="img/2021-02-09.thumbnail.webp"><img width="300" height="168" src="img/2021-02-09.webp"/><div>2021-02-09</div></a>
-<a href="img/2021-02-07.thumbnail.webp"><img width="288" height="300" src="img/2021-02-07.webp"/><div>2021-02-07</div></a>
-<a href="img/2021-02-06.thumbnail.webp"><img width="240" height="300" src="img/2021-02-06.webp"/><div>2021-02-06</div></a>
-<a href="img/2021-02-05.thumbnail.webp"><img width="300" height="300" src="img/2021-02-05.webp"/><div>2021-02-05</div></a>
-<a href="img/2021-01-31.thumbnail.webp"><img width="300" height="200" src="img/2021-01-31.webp"/><div>2021-01-31</div></a>
-<a href="img/2021-01-27.thumbnail.webp"><img width="300" height="201" src="img/2021-01-27.webp"/><div>2021-01-27</div></a>
-<a href="img/2021-01-21.thumbnail.webp"><img width="212" height="300" src="img/2021-01-21.webp"/><div>2021-01-21</div></a>
-</body>
+  <body onload="start()">
+    <h1>Tolokoban's Gallery</h1>
+    <div id="root" />
+    <div id="tgd-logo">
+      <svg
+        version="1.1"
+        viewBox="-700 -700 1400 1400"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g stroke="#000" stroke-width="4">
+          <path
+            class="c1"
+            d="M87,550L520-200 -173-200-87-50 260-50-87 550Z"
+            fill="#d70"
+          />
+          <path
+            class="c2"
+            d="M87,550L520-200 -173-200-87-50 260-50-87 550Z"
+            fill="#c50"
+            transform="rotate(120)"
+          />
+          <path
+            class="c3"
+            d="M87,550L520-200 -173-200-87-50 260-50-87 550Z"
+            fill="#b60"
+            transform="rotate(240)"
+          />
+        </g>
+      </svg>
+      <div id="tgd-logo-powered">Powered by <b>Tolokoban</b></div>
+    </div>
+  </body>
 </html>
