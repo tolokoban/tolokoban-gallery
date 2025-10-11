@@ -41,7 +41,7 @@ function createThumbnail(name) {
     {
       href: `img/${name}.webp`,
       title: `${name}`,
-      style: `--src:url(img/${name}.thumbnail.webp)`,
+      style: `--src:url(img/${name}.thumbnail.webp);width:${Math.floor(240 + 240 * Math.random())}px`,
     },
     [
       dom(
