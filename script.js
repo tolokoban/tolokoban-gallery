@@ -41,7 +41,7 @@ function createThumbnail(name) {
     {
       href: `img/${name}.webp`,
       title: `${name}`,
-      style: `--src:url(img/${name}.thumbnail.webp);width:${Math.floor(240 + 240 * Math.random())}px`,
+      style: `width:${Math.floor(240 + 240 * Math.random())}px`,
     },
     [
       dom(
@@ -50,6 +50,20 @@ function createThumbnail(name) {
       ),
     ],
   );
+  const observer = new IntersectionObserver(
+    (entries) => {
+      for (const entry of entries) {
+        if (entry.isIntersecting) {
+          a.style.backgroundImage = `url(img/${name}.thumbnail.webp)`;
+        }
+      }
+    },
+    {
+      threshold: 0,
+      rootMargin: "100px",
+    },
+  );
+  observer.observe(a);
   return a;
 }
 
@@ -60,3 +74,5 @@ function start() {
   }
   get("tgd-logo").style.opacity = "0";
 }
+
+document.addEventListener("DOMContentLoaded", start)
